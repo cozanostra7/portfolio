@@ -4,7 +4,6 @@ st.header("Contact us")
 
 contact_form = """
 <form action="https://usebasin.com/f/c5589e8160f1" method = "POST">
-    <input type="hidden" name="_captcha" value="false">
     <input type = "text" name ="name" placeholder="Your name" required>
     <input type = "email" name ="email" placeholder="Your email" required>
     <textarea name="message" placeholder=""Your message here> </textarea>
@@ -25,4 +24,8 @@ col1,col2 = st.columns(2)
 with col1:
     st.image("images/gmail.png", width=100)
     st.markdown("Contact me! muminov.b0509@gmail.com")
+
+with col2:
+    st.image("images/linkedin.png")
+    st.markdown("Reach me out on LinkedIn https://www.linkedin.com/in/bekhzod-muminov-756a75172/" )
 
