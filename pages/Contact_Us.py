@@ -26,6 +26,6 @@ with col1:
     st.markdown("Contact me! muminov.b0509@gmail.com")
 
 with col2:
-    st.image("images/linkedin.png")
+    st.image("images/linkedin.png",width=100)
     st.markdown("Reach me out on LinkedIn https://www.linkedin.com/in/bekhzod-muminov-756a75172/" )
 
