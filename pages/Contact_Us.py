@@ -2,33 +2,27 @@ import streamlit as st
 
 st.header("Contact us")
 
-with st.form(key="email_form"):
-    user_email = st.text_input("Your email address")
-    message= st.text_area("Your message")
-    button = st.form_submit_button("Send")
+contact_form = """
+<form action="https://usebasin.com/f/c5589e8160f1" method = "POST">
+    <input type="hidden" name="_captcha" value="false">
+    <input type = "text" name ="name" placeholder="Your name" required>
+    <input type = "email" name ="email" placeholder="Your email" required>
+    <textarea name="message" placeholder=""Your message here> </textarea>
+    <button type="submit">Send </button>
+</form>
+"""
 
+st.markdown(contact_form,unsafe_allow_html=True)
 
+def local_css(file_name):
+    with open(file_name) as f:
+        st.markdown(f'<style>f{f.read()}</style>',unsafe_allow_html=True)
 
-# col1,col2 = st.columns(2)
-#
-# with col1:
-#     st.image("images/gmail.png")
-#     content = """Contact me via gmail!"""
-#     st.write(content)
+local_css("style/style.css")
 
-icon_path = "images/gmail.png"
+col1,col2 = st.columns(2)
 
-st.markdown(
-    f"""
-    <a href="mailto:muminov.b0509@gmail.com" target="_blank">
-    <img src="{icon_path}" style="width:20px; height:20px; margin-right:5px;"> 
-    Send us a message!
-    """,
-    unsafe_allow_html=True,
-)
+with col1:
+    st.image("images/gmail.png", width=100)
+    st.markdown("Contact me! muminov.b0509@gmail.com")
 
-st.markdown(
-    """
-    
-    """
-)
