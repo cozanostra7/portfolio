@@ -27,5 +27,5 @@ with col1:
 
 with col2:
     st.image("images/linkedin.png",width=100)
-    st.markdown("Reach me out on LinkedIn https://www.linkedin.com/in/bekhzod-muminov-756a75172/" )
+    st.markdown('[Reach me out on LinkedIn](https://www.linkedin.com/in/bekhzod-muminov-756a75172/)' )
 
